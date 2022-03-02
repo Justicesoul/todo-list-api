@@ -40,6 +40,7 @@ import TodoType from '../config/todoType';
 
 export default defineComponent({
   name: 'Home',
+
   data: () => ({
     todoInput: '',
     dataLoading: true,
@@ -47,14 +48,17 @@ export default defineComponent({
     sortByNameStatus: false,
     showCompletedTasks: true,
   }),
+
   components: {
     Loading,
     Todo,
     Menu,
   },
+
   mounted() {
     this.getData();
   },
+
   methods: {
     getData() {
       axios
@@ -159,6 +163,7 @@ export default defineComponent({
       this.showCompletedTasks = !this.showCompletedTasks;
     },
   },
+
   computed: {
     filteredTodos() {
       if (!this.showCompletedTasks) {

@@ -34,13 +34,16 @@ import TodoType from '../config/todoType';
 
 export default defineComponent({
   name: 'TodoView',
+
   data: () => ({
     dataLoading: true,
     todo: {} as TodoType,
   }),
+
   components: {
     Loading,
   },
+  
   mounted() {
     this.getData();
   },
